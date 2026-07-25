@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import * as _debug from 'debug';
+import _debug from 'debug';
 import * as electron from 'electron';
 import * as _ from 'lodash';
 import { promises as fs } from 'fs';

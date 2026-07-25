@@ -150,5 +150,28 @@
     "bufferutil": "^4.0.8",
     "utf-8-validate": "^5.0.10",
     "winusb-driver-generator": "2.1.2"
+  },
+  "allowScripts": {
+    "@fortawesome/fontawesome-common-types@6.5.2": true,
+    "@fortawesome/fontawesome-free@6.5.2": true,
+    "@fortawesome/fontawesome-svg-core@6.5.2": true,
+    "@fortawesome/free-regular-svg-icons@6.5.2": true,
+    "@fortawesome/free-solid-svg-icons@6.5.2": true,
+    "@ronomon/direct-io@3.0.1": true,
+    "bufferutil@4.0.8": true,
+    "core-js@2.6.12": true,
+    "core-js@3.37.0": true,
+    "drivelist@12.0.2": true,
+    "edgedriver@5.3.10": true,
+    "electron@37.2.4": true,
+    "electron-winstaller@5.3.1": true,
+    "es5-ext@0.10.64": true,
+    "geckodriver@4.3.3": true,
+    "lzma-native@8.0.6": true,
+    "mountutils@2.0.1": true,
+    "styled-components@5.3.6": true,
+    "usb@2.12.1": true,
+    "utf-8-validate@5.0.10": true,
+    "xxhash-addon@2.0.3": true
   }
 }
