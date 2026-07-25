@@ -1,0 +1,112 @@
+{
+  "name": "etcher-sdk",
+  "version": "10.0.0",
+  "description": "Etcher SDK",
+  "author": "Balena Ltd <hello@balena.io>",
+  "main": "build/index.js",
+  "license": "Apache-2.0",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "flowzone-preinstall": "sudo apt-get update && sudo apt-get install -y libudev-dev",
+    "test": "npm run lint && mocha -r ts-node/register tests/**/*.spec.ts",
+    "lint": "balena-lint lib typings examples",
+    "lint-fix": "balena-lint --fix lib typings examples tests",
+    "build": "tsc",
+    "doc": "typedoc --readme none --plugin typedoc-plugin-markdown --out doc lib && npm run sed",
+    "sed": "sed -i'.bak' 's|'$(pwd)'||g' $(find doc -type f) && rimraf doc/*.bak doc/**/*.bak",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "build",
+    "typings"
+  ],
+  "keywords": [
+    "etcher",
+    "sdk",
+    "flash",
+    "flashing",
+    "disk",
+    "disk image",
+    "sd-card",
+    "imager",
+    "img",
+    "iso",
+    "dmg",
+    "balena",
+    "balenaos"
+  ],
+  "homepage": "https://github.com/balena-io-modules/etcher-sdk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balena-io-modules/etcher-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/balena-io-modules/etcher-sdk/issues"
+  },
+  "dependencies": {
+    "@balena/node-beaglebone-usbboot": "^3.0.0",
+    "@balena/udif": "^1.1.2",
+    "@ronomon/direct-io": "^3.0.1",
+    "aws4-axios": "^3.3.0",
+    "axios": "^1.9.0",
+    "axios-http2-adapter": "^1.0.3",
+    "balena-image-fs": "^7.2.0",
+    "blockmap": "^4.0.3",
+    "check-disk-space": "^3.4.0",
+    "cyclic-32": "^1.1.0",
+    "debug": "^4.4.1",
+    "drivelist": "^12.0.0",
+    "file-disk": "^8.0.1",
+    "file-type": "^16.0.0",
+    "glob": "^10.3.10",
+    "gzip-stream": "^2.0.0",
+    "lzma-native": "^8.0.6",
+    "minimatch": "^9.0.3",
+    "mountutils": "^2.0.0",
+    "node-raspberrypi-usbboot": "1.1.0",
+    "outdent": "^0.8.0",
+    "partitioninfo": "^6.0.2",
+    "rwmutex": "^1.0.0",
+    "tslib": "^2.0.0",
+    "unbzip2-stream": "github:balena-io-modules/unbzip2-stream#4a54f56a25b58950f9e4277c56db2912d62242e7",
+    "unzip-stream": "^0.3.1",
+    "xxhash-addon": "^2.0.1",
+    "yauzl": "^2.9.2",
+    "zip-part-stream": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "winusb-driver-generator": "^2.0.0"
+  },
+  "devDependencies": {
+    "@balena/lint": "^7.2.1",
+    "@types/bluebird": "^3.5.23",
+    "@types/chai": "^4.1.4",
+    "@types/cli-spinner": "^0.2.0",
+    "@types/crc": "^3.4.0",
+    "@types/debug": "4.1.12",
+    "@types/lodash": "^4.14.108",
+    "@types/mocha": "^10.0.3",
+    "@types/node": "^20.0.0",
+    "@types/progress": "^2.0.1",
+    "@types/sinon": "^17.0.0",
+    "@types/yargs": "^17.0.29",
+    "@types/yauzl": "^2.9.0",
+    "chai": "^4.1.2",
+    "cli-spinner": "^0.2.8",
+    "mocha": "^10.8.2",
+    "progress": "^2.0.0",
+    "rimraf": "^5.0.5",
+    "sinon": "^17.0.0",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.25.3",
+    "typedoc-plugin-markdown": "^3.16.0",
+    "typescript": "^5.2.2",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">18 <25"
+  },
+  "versionist": {
+    "publishedAt": "2025-05-29T15:34:12.932Z"
+  }
+}
